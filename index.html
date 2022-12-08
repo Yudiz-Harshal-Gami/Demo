@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #userEmail {
+            /* width: 200px; */
+            height: 25px;
+            padding: 15px;
+            font-size: 15px;
+        }
+
+        #btnSubmit {
+            height: 25px;
+            /* padding: 15px; */
+            /* padding: 15px; */
+            background-color: red;
+            border: 0;
+            font-size: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" onsubmit="return sendEmail()">
+        <input type="email" id="userEmail" placeholder="Enter Your Email">
+        <input type="submit" id="btnSubmit" value="Subscribe" />
+    </form>
+
+    <script>
+        function sendEmail() {
+
+            let userEmail = document.getElementById('userEmail').value
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "ownh136@gmail.com",
+                Password: "4EBFBB8A5A1646DF817C7C53D813C7CD339B",
+                To: userEmail,
+                From: "ownh136@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body",
+                // Attachments: [{
+                //     name: "k.txt",
+                //     // name: "contact.html",
+                //     path : "k.txt"
+                // }]
+            }).then(
+                message => alert(message)
+            );
+
+            return false
+
+        }
+    </script>
+</body>
+
+</html>
