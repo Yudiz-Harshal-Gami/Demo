@@ -147,7 +147,7 @@
 	<script>
 		let tableData = document.getElementById('tableData')
 		
-		i = 0
+		let i = 0
 
 		for (let j = 0; j < 5; j++) {
 			let node1 = document.createElement("tr")
@@ -159,6 +159,7 @@
 			node2.innerHTML = text2
 			tableData.appendChild(node2);
 			i++
+			console.log("loop" , j);
 		}
 	</script>
 
