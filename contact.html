@@ -148,18 +148,17 @@
 		let tableData = document.getElementById('tableData')
 		
 		i = 0
-		// let textnode;
-		
-		
-		
-		// node.appendChild(textnode);
-		
-		for(let j = 0 ; j < 5 ; j++){
-			let node = document.createElement("tr")
-			let text = "<td class='head'>a" + i + "</td><td class='data'>" + i + "</td>"
-			node.innerHTML = text
+
+		for (let j = 0; j < 5; j++) {
+			let node1 = document.createElement("tr")
+			let text1 = "<td class='head'>a" + i + "</td>"
+			node1.innerHTML = text1
+			tableData.appendChild(node1);
+			let node2 = document.createElement("tr")
+			let text2 = "<td class='data'>" + i + "</td>"
+			node2.innerHTML = text2
+			tableData.appendChild(node2);
 			i++
-			tableData.appendChild(node);
 		}
 	</script>
 
